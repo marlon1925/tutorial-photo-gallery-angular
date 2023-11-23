@@ -14,37 +14,28 @@ export class Tab1Page {
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'INFO',
-      subHeader: 'BSC',
-      message: 'Hola Como estas',
-      buttons: ['Close'],
+      subHeader: 'Guardado',
+      message: 'Sus cambios se han guardado con exito',
+      buttons: ['Ok'],
     });
 
     await alert.present();
   }
   async presentActionSheet() {
     const actionSheet = await this.actionSheetCtrl.create({
-      header: 'Hojas de vida',
+      header: 'Educación',
       buttons: [
         {
-          text: 'Marlon',
+          text: 'Bachillerato General Unificado',
           role: 'destructive',
-          handler: () => {
-            this.router.navigateByUrl('/tab')
-          }
         },
         {
-          text: 'Josue',
+          text: 'Tecnologia Superior en Desarrollo de software',
           handler: () => {
             // Lógica para manejar la acción de compartir
           }
         },
-        {
-          text: 'Wilson',
-          role: 'cancel',
-          handler: () => {
-            // Lógica para manejar la acción de cancelar
-          }
-        }
+        
       ]
     });
   
