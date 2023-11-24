@@ -1,3 +1,4 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
     ExploreContainerComponentModule,
     RouterModule.forChild([{ path: '', component: Tab3Page }])
   ],
-  declarations: [Tab3Page]
+  declarations: [Tab3Page],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA] // Add this line
 })
 export class Tab3PageModule {}

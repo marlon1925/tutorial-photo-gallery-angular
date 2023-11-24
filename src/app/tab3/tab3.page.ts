@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { PopoverController } from '@ionic/angular';
+import { PopinfoComponent } from '../components/popinfo/popinfo.component';
 
 @Component({
   selector: 'app-tab3',
@@ -6,7 +8,20 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  @ViewChild('popover') popover;
 
-  constructor() {}
+  isOpen = false;
 
+  constructor(private popoverCtrl: PopoverController) { }
+
+  ngOnInit(){
+
+  }
+
+  async mostrarPop(){
+    const popover = await this.popoverCtrl.create({
+      component: PopinfoComponent
+    });
+    await popover.present();
+  }
 }
