@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
-import { PopinfoComponent } from '../components/popinfo/popinfo.component';
+import { PopinfoComponent } from '../components/popinfo/popinfo.component1';
 
 @Component({
   selector: 'app-tab4',
